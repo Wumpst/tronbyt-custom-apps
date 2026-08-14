@@ -288,7 +288,7 @@ def main(config):
                                             render.Box(width = 31, height = 10, child = render.Row(expanded = True, main_align = "start", cross_align = "center", children = [
                                                 render.Box(width = 16, height = 10, child = render.Image(awayLogo, width = 16, height = 16)),
                                             ])),
-                                            render.Box(width = 31, height = 10, child = render.Box(width = 29, height = 10, color = backgroundColor, child = render.Text(content = get_record(awayScore), color = awayScoreColor, font = scoreFont))),
+                                            render.Box(width = 31, height = 10, child = render.Box(width = 29, height = 10, color = backgroundColor, child = render.Text(content = get_record(awayScore), color = awayScoreColor, font = textFont))),
                                             render.Box(width = 1, height = 10, color = borderColor),
                                         ])),
                                         render.Box(width = 64, height = 1, color = borderColor),
@@ -297,7 +297,7 @@ def main(config):
                                             render.Box(width = 31, height = 10, child = render.Row(expanded = True, main_align = "start", cross_align = "center", children = [
                                                 render.Box(width = 16, height = 10, child = render.Image(homeLogo, width = 16, height = 16)),
                                             ])),
-                                            render.Box(width = 31, height = 10, child = render.Box(width = 29, height = 10, color = backgroundColor, child = render.Text(content = get_record(homeScore), color = homeScoreColor, font = scoreFont))),
+                                            render.Box(width = 31, height = 10, child = render.Box(width = 29, height = 10, color = backgroundColor, child = render.Text(content = get_record(homeScore), color = homeScoreColor, font = textFont))),
                                             render.Box(width = 1, height = 10, color = borderColor),
                                         ])),
                                     ],
