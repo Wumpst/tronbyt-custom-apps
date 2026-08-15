@@ -308,6 +308,102 @@ def main(config):
                     ],
                 )
 
+            elif displayType == "scoreboard":
+                textColor = "#fff"
+                backgroundColor = "#000"
+                borderColor = "#000"
+
+                renderCategory.extend(
+                    [
+                        render.Column(
+                            expanded = True,
+                            main_align = "space_between",
+                            cross_align = "start",
+                            children = [
+                                render.Row(
+                                    expanded = True,
+                                    main_align = "space_between",
+                                    cross_align = "start",
+                                    children = get_date_column(
+                                        displayTop,
+                                        now,
+                                        i,
+                                        rotationSpeed,
+                                        textColor,
+                                        borderColor,
+                                        displayType,
+                                        gameTime,
+                                        timeColor,
+                                    ),
+                                ),
+                                render.Row(
+                                    expanded = True,
+                                    main_align = "space_between",
+                                    cross_align = "start",
+                                    children = [
+                                        render.Column(
+                                            children = [
+                                                render.Box(
+                                                    width = 64,
+                                                    height = 12,
+                                                    color = "#000000",
+                                                    child = render.Row(
+                                                        expanded = True,
+                                                        main_align = "start",
+                                                        cross_align = "center",
+                                                        children = [
+                                                            render.Image(
+                                                                awayLogo,
+                                                                width = 30,
+                                                                height = 30,
+                                                            ),
+                                                            render.Box(
+                                                                width = 34,
+                                                                height = 12,
+                                                                child = render.Text(
+                                                                    content = get_record(awayScore),
+                                                                    color = awayScoreColor,
+                                                                    font = "terminus-16",
+                                                                ),
+                                                            ),
+                                                        ],
+                                                    ),
+                                                ),
+                                                render.Box(
+                                                    width = 64,
+                                                    height = 12,
+                                                    color = "#000000",
+                                                    child = render.Row(
+                                                        expanded = True,
+                                                        main_align = "start",
+                                                        cross_align = "center",
+                                                        children = [
+                                                            render.Image(
+                                                                homeLogo,
+                                                                width = 30,
+                                                                height = 30,
+                                                            ),
+                                                            render.Box(
+                                                                width = 34,
+                                                                height = 12,
+                                                                child = render.Text(
+                                                                    content = get_record(homeScore),
+                                                                    color = homeScoreColor,
+                                                                    font = "terminus-16",
+                                                                ),
+                                                            ),
+                                                        ],
+                                                    ),
+                                                ),
+                                            ],
+                                        ),
+                                    ],
+                                ),
+                            ],
+                        ),
+                    ],
+                )
+
             elif displayType == "horizontal":
                 textColor = "#fff"
                 backgroundColor = "#000"
@@ -714,6 +810,10 @@ displayOptions = [
     schema.Option(
         display = "Stadium",
         value = "stadium",
+    ),
+    schema.Option(
+        display = "Scoreboard",
+        value = "scoreboard",
     ),
     schema.Option(
         display = "Retro",
