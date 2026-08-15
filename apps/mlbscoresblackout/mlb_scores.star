@@ -322,7 +322,7 @@ def main(config):
                             children = [
                                 render.Box(
                                     width = 64,
-                                    height = 14,
+                                    height = 13,
                                     color = "#000000",
                                     child = render.Row(
                                         expanded = True,
@@ -330,26 +330,26 @@ def main(config):
                                         cross_align = "center",
                                         children = [
                                             render.Box(
-                                                width = 18,
-                                                height = 14,
+                                                width = 20,
+                                                height = 13,
                                                 child = render.Image(
                                                     awayLogo,
-                                                    width = 14,
-                                                    height = 14,
+                                                    width = 16,
+                                                    height = 16,
                                                 ),
                                             ),
                                             render.Box(
-                                                width = 22,
-                                                height = 14,
+                                                width = 20,
+                                                height = 13,
                                                 child = render.Text(
                                                     content = away[:3].upper(),
                                                     color = awayScoreColor,
-                                                    font = "tb-8",
+                                                    font = "CG-pixel-3x5-mono",
                                                 ),
                                             ),
                                             render.Box(
                                                 width = 24,
-                                                height = 14,
+                                                height = 13,
                                                 child = render.Text(
                                                     content = get_record(awayScore),
                                                     color = awayScoreColor,
@@ -361,7 +361,7 @@ def main(config):
                                 ),
                                 render.Box(
                                     width = 64,
-                                    height = 14,
+                                    height = 13,
                                     color = "#000000",
                                     child = render.Row(
                                         expanded = True,
@@ -369,26 +369,26 @@ def main(config):
                                         cross_align = "center",
                                         children = [
                                             render.Box(
-                                                width = 18,
-                                                height = 14,
+                                                width = 20,
+                                                height = 13,
                                                 child = render.Image(
                                                     homeLogo,
-                                                    width = 14,
-                                                    height = 14,
+                                                    width = 16,
+                                                    height = 16,
                                                 ),
                                             ),
                                             render.Box(
-                                                width = 22,
-                                                height = 14,
+                                                width = 20,
+                                                height = 13,
                                                 child = render.Text(
                                                     content = home[:3].upper(),
                                                     color = homeScoreColor,
-                                                    font = "tb-8",
+                                                    font = "CG-pixel-3x5-mono",
                                                 ),
                                             ),
                                             render.Box(
                                                 width = 24,
-                                                height = 14,
+                                                height = 13,
                                                 child = render.Text(
                                                     content = get_record(homeScore),
                                                     color = homeScoreColor,
@@ -400,7 +400,7 @@ def main(config):
                                 ),
                                 render.Box(
                                     width = 64,
-                                    height = 4,
+                                    height = 6,
                                     color = "#000000",
                                     child = render.Row(
                                         expanded = True,
