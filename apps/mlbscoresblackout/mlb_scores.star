@@ -327,12 +327,12 @@ def main(config):
 
                                     # Team logos
                                     render.Box(
-                                        width = 20,
+                                        width = 18,
                                         height = 32,
                                         child = render.Column(
                                             children = [
                                                 render.Box(
-                                                    width = 20,
+                                                    width = 18,
                                                     height = 16,
                                                     child = render.Image(
                                                         awayLogo,
@@ -341,7 +341,7 @@ def main(config):
                                                     ),
                                                 ),
                                                 render.Box(
-                                                    width = 20,
+                                                    width = 18,
                                                     height = 16,
                                                     child = render.Image(
                                                         homeLogo,
@@ -356,7 +356,7 @@ def main(config):
                                     # One game status in the center:
                                     # FINAL, BOT 7, TOP 4, start time, etc.
                                     render.Box(
-                                        width = 24,
+                                        width = 28,
                                         height = 32,
                                         child = render.Row(
                                             expanded = True,
@@ -365,7 +365,7 @@ def main(config):
                                             children = [
                                                 render.Text(
                                                     content = get_shortened_display(gameTime),
-                                                    color = timeColor,
+                                                    color = "#ffffff",
                                                     font = "CG-pixel-3x5-mono",
                                                 ),
                                             ],
@@ -374,12 +374,12 @@ def main(config):
 
                                     # Scores
                                     render.Box(
-                                        width = 20,
+                                        width = 18,
                                         height = 32,
                                         child = render.Column(
                                             children = [
                                                 render.Box(
-                                                    width = 20,
+                                                    width = 18,
                                                     height = 16,
                                                     child = render.Row(
                                                         expanded = True,
@@ -395,7 +395,7 @@ def main(config):
                                                     ),
                                                 ),
                                                 render.Box(
-                                                    width = 20,
+                                                    width = 18,
                                                     height = 16,
                                                     child = render.Row(
                                                         expanded = True,
