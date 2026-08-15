@@ -315,107 +315,106 @@ def main(config):
 
                 renderCategory.extend(
                     [
-                        render.Column(
-                            expanded = True,
-                            main_align = "start",
-                            cross_align = "start",
-                            children = [
-                                render.Box(
-                                    width = 64,
-                                    height = 13,
-                                    color = "#000000",
-                                    child = render.Row(
-                                        expanded = True,
-                                        main_align = "start",
-                                        cross_align = "center",
-                                        children = [
-                                            render.Box(
-                                                width = 20,
-                                                height = 13,
-                                                child = render.Image(
-                                                    awayLogo,
-                                                    width = 16,
+                        render.Box(
+                            width = 64,
+                            height = 32,
+                            color = "#000000",
+                            child = render.Row(
+                                expanded = True,
+                                main_align = "start",
+                                cross_align = "center",
+                                children = [
+
+                                    # Team logos
+                                    render.Box(
+                                        width = 20,
+                                        height = 32,
+                                        child = render.Column(
+                                            children = [
+                                                render.Box(
+                                                    width = 20,
                                                     height = 16,
+                                                    child = render.Image(
+                                                        awayLogo,
+                                                        width = 16,
+                                                        height = 16,
+                                                    ),
                                                 ),
-                                            ),
-                                            render.Box(
-                                                width = 20,
-                                                height = 13,
-                                                child = render.Text(
-                                                    content = away[:3].upper(),
-                                                    color = awayScoreColor,
+                                                render.Box(
+                                                    width = 20,
+                                                    height = 16,
+                                                    child = render.Image(
+                                                        homeLogo,
+                                                        width = 16,
+                                                        height = 16,
+                                                    ),
+                                                ),
+                                            ],
+                                        ),
+                                    ),
+
+                                    # One game status in the center:
+                                    # FINAL, BOT 7, TOP 4, start time, etc.
+                                    render.Box(
+                                        width = 24,
+                                        height = 32,
+                                        child = render.Row(
+                                            expanded = True,
+                                            main_align = "center",
+                                            cross_align = "center",
+                                            children = [
+                                                render.Text(
+                                                    content = get_shortened_display(gameTime),
+                                                    color = timeColor,
                                                     font = "CG-pixel-3x5-mono",
                                                 ),
-                                            ),
-                                            render.Box(
-                                                width = 24,
-                                                height = 13,
-                                                child = render.Text(
-                                                    content = get_record(awayScore),
-                                                    color = awayScoreColor,
-                                                    font = "terminus-16",
-                                                ),
-                                            ),
-                                        ],
+                                            ],
+                                        ),
                                     ),
-                                ),
-                                render.Box(
-                                    width = 64,
-                                    height = 13,
-                                    color = "#000000",
-                                    child = render.Row(
-                                        expanded = True,
-                                        main_align = "start",
-                                        cross_align = "center",
-                                        children = [
-                                            render.Box(
-                                                width = 20,
-                                                height = 13,
-                                                child = render.Image(
-                                                    homeLogo,
-                                                    width = 16,
+
+                                    # Scores
+                                    render.Box(
+                                        width = 20,
+                                        height = 32,
+                                        child = render.Column(
+                                            children = [
+                                                render.Box(
+                                                    width = 20,
                                                     height = 16,
+                                                    child = render.Row(
+                                                        expanded = True,
+                                                        main_align = "end",
+                                                        cross_align = "center",
+                                                        children = [
+                                                            render.Text(
+                                                                content = get_record(awayScore),
+                                                                color = awayScoreColor,
+                                                                font = "terminus-16",
+                                                            ),
+                                                        ],
+                                                    ),
                                                 ),
-                                            ),
-                                            render.Box(
-                                                width = 20,
-                                                height = 13,
-                                                child = render.Text(
-                                                    content = home[:3].upper(),
-                                                    color = homeScoreColor,
-                                                    font = "CG-pixel-3x5-mono",
+                                                render.Box(
+                                                    width = 20,
+                                                    height = 16,
+                                                    child = render.Row(
+                                                        expanded = True,
+                                                        main_align = "end",
+                                                        cross_align = "center",
+                                                        children = [
+                                                            render.Text(
+                                                                content = get_record(homeScore),
+                                                                color = homeScoreColor,
+                                                                font = "terminus-16",
+                                                            ),
+                                                        ],
+                                                    ),
                                                 ),
-                                            ),
-                                            render.Box(
-                                                width = 24,
-                                                height = 13,
-                                                child = render.Text(
-                                                    content = get_record(homeScore),
-                                                    color = homeScoreColor,
-                                                    font = "terminus-16",
-                                                ),
-                                            ),
-                                        ],
+                                            ],
+                                        ),
                                     ),
-                                ),
-                                render.Box(
-                                    width = 64,
-                                    height = 6,
-                                    color = "#000000",
-                                    child = render.Row(
-                                        expanded = True,
-                                        main_align = "center",
-                                        cross_align = "center",
-                                        children = [
-                                            render.Text(
-                                                content = get_shortened_display(gameTime),
-                                                color = timeColor,
-                                                font = "tom-thumb",
-                                            ),
-                                        ],
-                                    ),
-                                ),
-                            ],
+                                ],
+                            ),
                         ),
                     ],
                 )
